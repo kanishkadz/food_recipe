@@ -62,7 +62,6 @@ class _HomeState extends State<Home> {
                           }else{
                             getRecipe(searchController.text);
                           }
-
                         },
                         child: Container(
                           child: Icon(
