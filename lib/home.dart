@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
 
   getRecipe(String query) async{
     String url = "https://api.edamam.com/search?q=$query&app_id=c90bf8d1&app_key=aca1f0d547799ccb805d117c94b040f0";
-    var response = await http.get(Uri.parse(url));
+    Response response = await get(Uri.parse(url));
     Map data = jsonDecode(response.body);
     print(response.body);
   }
