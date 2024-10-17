@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -10,7 +10,12 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   TextEditingController searchController = new TextEditingController();
-  String url = "https://api.edamam.com/search?q=chicken&app_id=c90bf8d1&app_key=aca1f0d547799ccb805d117c94b040f0";
+
+  
+  getRecipe(String query){
+    String url = "https://api.edamam.com/search?q=$query&app_id=c90bf8d1&app_key=aca1f0d547799ccb805d117c94b040f0";
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
