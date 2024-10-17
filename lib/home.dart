@@ -11,10 +11,10 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   TextEditingController searchController = new TextEditingController();
 
-  
-  getRecipe(String query){
-    String url = "https://api.edamam.com/search?q=$query&app_id=c90bf8d1&app_key=aca1f0d547799ccb805d117c94b040f0";
 
+  getRecipe(String query) async{
+    String url = "https://api.edamam.com/search?q=$query&app_id=c90bf8d1&app_key=aca1f0d547799ccb805d117c94b040f0";
+    var response = await http.get(url);
   }
   @override
   Widget build(BuildContext context) {
