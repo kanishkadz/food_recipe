@@ -14,7 +14,8 @@ class _HomeState extends State<Home> {
 
   getRecipe(String query) async{
     String url = "https://api.edamam.com/search?q=$query&app_id=c90bf8d1&app_key=aca1f0d547799ccb805d117c94b040f0";
-    var response = await http.get(url);
+    var response = await http.get(Uri.parse(url));
+    print(response.body);
   }
   @override
   Widget build(BuildContext context) {
