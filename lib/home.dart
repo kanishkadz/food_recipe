@@ -14,11 +14,14 @@ class _HomeState extends State<Home> {
       body: Stack(
         children: [
           Container(
-            color:Colors.deepOrange,
-          ),
-          Container(
-            color: Colors.greenAccent,
-          ),
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [ Color(0xff213A50), Color(0xff071938)]
+              ),
+            ),
+          )
         ],
       ),
     );
