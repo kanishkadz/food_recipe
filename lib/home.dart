@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -15,7 +17,14 @@ class _HomeState extends State<Home> {
   getRecipe(String query) async{
     String url = "https://api.edamam.com/search?q=$query&app_id=c90bf8d1&app_key=aca1f0d547799ccb805d117c94b040f0";
     var response = await http.get(Uri.parse(url));
+    Map data = jsonDecode(response.body);
     print(response.body);
+  }
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getRecipe("Laddoo");
   }
   @override
   Widget build(BuildContext context) {
