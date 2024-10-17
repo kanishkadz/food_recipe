@@ -21,7 +21,8 @@ class _HomeState extends State<Home> {
                 colors: [ Color(0xff213A50), Color(0xff071938)]
               ),
             ),
-          )
+          ),
+          SafeArea(child: Text("Kanishka Anand"))          
         ],
       ),
     );
