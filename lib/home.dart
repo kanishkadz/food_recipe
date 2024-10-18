@@ -1,5 +1,5 @@
 import 'dart:convert';
-
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 
@@ -19,6 +19,7 @@ class _HomeState extends State<Home> {
     Response response = await get(Uri.parse(url));
     Map data = jsonDecode(response.body);
     print(response.body);
+    log(data.toString());
   }
   @override
   void initState() {
