@@ -26,6 +26,7 @@ class _HomeState extends State<Home> {
       RecipeModel recipeModel = new RecipeModel();
       recipeModel = RecipeModel.fromMap(element["recipe"]);
       recipeList.add(recipeModel);
+      log(recipeList.toString());
     })
   }
   @override
