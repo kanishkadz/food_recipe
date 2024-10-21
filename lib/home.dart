@@ -11,6 +11,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  List<RecipeModel> recipeList = <RecipeModel> [];
   TextEditingController searchController = new TextEditingController();
 
 
@@ -20,6 +21,10 @@ class _HomeState extends State<Home> {
     Map data = jsonDecode(response.body);
     print(response.body);
     log(data.toString());
+
+    data["hits"].forEach((element){
+      
+    })
   }
   @override
   void initState() {
