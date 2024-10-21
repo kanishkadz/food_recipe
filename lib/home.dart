@@ -27,6 +27,11 @@ class _HomeState extends State<Home> {
       recipeModel = RecipeModel.fromMap(element["recipe"]);
       recipeList.add(recipeModel);
       log(recipeList.toString());
+    });
+
+    recipeList.forEach((Recipe) {
+      print(Recipe.applabel);
+      print(Recipe.appcalories);
     })
   }
   @override
