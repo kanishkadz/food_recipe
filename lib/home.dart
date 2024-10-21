@@ -25,6 +25,7 @@ class _HomeState extends State<Home> {
     data["hits"].forEach((element){
       RecipeModel recipeModel = new RecipeModel();
       recipeModel = RecipeModel.fromMap(element["recipe"]);
+      recipeList.add(recipeModel);
     })
   }
   @override
