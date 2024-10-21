@@ -1,3 +1,6 @@
 class RecipeModel{
-  String
+  String applabel;
+  String appimgUrl;
+  String appcalories;
+  String appurl;
 }
