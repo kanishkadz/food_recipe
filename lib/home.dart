@@ -128,7 +128,7 @@ class _HomeState extends State<Home> {
                           ClipRRect(
                             borderRadius: BorderRadius.circular(10.0),
                             child: Image.network(
-                                recipeList[index].appimgUrl
+                                recipeList[index].appimgUrl,
                                 fit: BoxFit.cover,
                               width: double.infinity,
                               height: 200,
@@ -143,7 +143,7 @@ class _HomeState extends State<Home> {
                                   decoration: BoxDecoration(
                                     color: Colors.black26,
                                   ),
-                                  Text(recipeList[0].applabel, style: TextStyle(
+                                  child: Text(recipeList[index].applabel, style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 20
                                   ),),
@@ -165,7 +165,8 @@ class _HomeState extends State<Home> {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text(recipeList[0].appcalories.toString().substring(0, 6)),
+                                    Icon(Icons.local_fire_department, size: 15),
+                                    Text(recipeList[index].appcalories.toString().substring(0, 6)),
                                   ],
                                 ),
                               ),
