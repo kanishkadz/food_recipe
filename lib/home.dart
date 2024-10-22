@@ -113,9 +113,21 @@ class _HomeState extends State<Home> {
                 child: ListView.builder(
                   physics: NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
-                    itemCount: 12,
+                    itemCount: recipeList.length,
                     itemBuilder: (context, index){
-                  return Text("This is a widget");
+                  return InkWell(
+                    onTap: (){},
+                    child: Card(
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            child: Image.network(recipeList[index].appimgUrl),
+                          ),
+
+                        ],
+                      ),
+                    ),
+                  );
                 }),
               )
             ],
