@@ -139,6 +139,9 @@ class _HomeState extends State<Home> {
                               bottom: 0,
                               child: Container(
                                 padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                                  decoration: BoxDecoration(
+                                    color: Colors.black26,
+                                  ),
                                   Text(recipeList[0].applabel),
                               ),
                           )
