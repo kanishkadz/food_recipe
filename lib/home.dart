@@ -127,7 +127,11 @@ class _HomeState extends State<Home> {
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(10.0),
-                            child: Image.network(recipeList[index].appimgUrl),
+                            child: Image.network(
+                                recipeList[index].appimgUrl
+                                fit: BoxFit.cover,
+                              width: double.infinity,
+                            ),
                           ),
 
                         ],
