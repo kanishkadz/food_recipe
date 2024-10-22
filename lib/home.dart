@@ -118,10 +118,15 @@ class _HomeState extends State<Home> {
                   return InkWell(
                     onTap: (){},
                     child: Card(
-                      margin: EdgeInsets.all(10)
+                      margin: EdgeInsets.all(20),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        elevation: 0.0,
+                      ),
                       child: Stack(
                         children: [
                           ClipRRect(
+                            borderRadius: BorderRadius.circular(10.0),
                             child: Image.network(recipeList[index].appimgUrl),
                           ),
 
