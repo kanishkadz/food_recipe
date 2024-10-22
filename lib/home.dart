@@ -12,7 +12,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List<RecipeModel> recipeList = <RecipeModel> [];
+  List<RecipeModel> recipeList = <RecipeModel>[];
   TextEditingController searchController = new TextEditingController();
 
 
