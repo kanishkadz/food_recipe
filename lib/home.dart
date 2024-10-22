@@ -151,8 +151,8 @@ class _HomeState extends State<Home> {
                           ),
                           Positioned(
                             right: 0,
-                            width: 50,
-                            height: 100,
+                            width: 100,
+                            height: 50,
                             child: Container(
                               decoration: BoxDecoration(
                                 color: Colors.white,
