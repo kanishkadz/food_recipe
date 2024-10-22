@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
-import 'recipe_model.dart';
+import 'model.dart';
 
 Widget KanishkaText(){
   return Text("I'm Cool !!")
