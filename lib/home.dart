@@ -66,7 +66,7 @@ class _HomeState extends State<Home> {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            if ((searchController.text).replaceAll(" ", "") == "") {
+                            if (searchController.text.trim().isEmpty) {
                               print("Blank search");
                             } else {
                               getRecipe(searchController.text);
@@ -87,7 +87,7 @@ class _HomeState extends State<Home> {
                                 border: InputBorder.none,
                                 hintText: "Let's Cook Something!"),
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ),
@@ -120,7 +120,7 @@ class _HomeState extends State<Home> {
                         child: Card(
                           margin: EdgeInsets.all(20),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)
+                            borderRadius: BorderRadius.circular(10),
                           ),
                           child: Stack(
                             children: [
@@ -131,6 +131,19 @@ class _HomeState extends State<Home> {
                                   fit: BoxFit.cover,
                                   width: double.infinity,
                                   height: 200,
+                                  loadingBuilder: (BuildContext context, Widget child, ImageChunkEvent? loadingProgress) {
+                                    if (loadingProgress == null) return child;
+                                    return Center(
+                                      child: CircularProgressIndicator(
+                                        value: loadingProgress.expectedTotalBytes != null
+                                            ? loadingProgress.cumulativeBytesLoaded / (loadingProgress.expectedTotalBytes ?? 1)
+                                            : null,
+                                      ),
+                                    );
+                                  },
+                                  errorBuilder: (BuildContext context, Object error, StackTrace? stackTrace) {
+                                    return Center(child: Icon(Icons.error)); // Display an error icon
+                                  },
                                 ),
                               ),
                               Positioned(
@@ -138,15 +151,13 @@ class _HomeState extends State<Home> {
                                 right: 0,
                                 bottom: 0,
                                 child: Container(
-                                  padding: EdgeInsets.symmetric(
-                                      vertical: 5, horizontal: 10),
+                                  padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
                                   decoration: BoxDecoration(
                                     color: Colors.black26,
                                   ),
                                   child: Text(
                                     recipeList[index].applabel,
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 20),
+                                    style: TextStyle(color: Colors.white, fontSize: 20),
                                   ),
                                 ),
                               ),
@@ -164,29 +175,25 @@ class _HomeState extends State<Home> {
                                   ),
                                   child: Center(
                                     child: Row(
-                                      mainAxisAlignment:
-                                      MainAxisAlignment.center,
+                                      mainAxisAlignment: MainAxisAlignment.center,
                                       children: [
-                                        Icon(Icons.local_fire_department,
-                                            size: 15),
-                                        Text(recipeList[index]
-                                            .appcalories
-                                            .toStringAsFixed(1)), // Format calories
+                                        Icon(Icons.local_fire_department, size: 15),
+                                        Text(recipeList[index].appcalories.toStringAsFixed(1)), // Format calories
                                       ],
                                     ),
                                   ),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ),
                       );
                     },
                   ),
-                )
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
