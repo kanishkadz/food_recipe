@@ -152,7 +152,7 @@ class _HomeState extends State<Home> {
                           Positioned(
                             right: 0,
                             width: 80,
-                            height: 50,
+                            height: 40,
                             child: Container(
                               decoration: BoxDecoration(
                                 color: Colors.white,
@@ -161,7 +161,13 @@ class _HomeState extends State<Home> {
                                   bottomLeft: Radius.circular(10),
                                 )
                               ),
-                              Text(recipeList[0].appcalories.toString().substring(0, 6)),
+                              child: Center(
+                                child: Row(
+                                  children: [
+                                    Text(recipeList[0].appcalories.toString().substring(0, 6)),
+                                  ],
+                                ),
+                              ),
                             )
                           )
                         ],
