@@ -59,7 +59,8 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
-          Column(
+          SingleChildScrollView(
+            child: Column(
             children: [
               //Search Bar
               SafeArea(
@@ -122,6 +123,7 @@ class _HomeState extends State<Home> {
               )
             ],
           ),
+          )
         ],
       ),
     );
