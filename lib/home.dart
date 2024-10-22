@@ -131,6 +131,7 @@ class _HomeState extends State<Home> {
                                 recipeList[index].appimgUrl
                                 fit: BoxFit.cover,
                               width: double.infinity,
+                              height: 200,
                             ),
                           ),
 
