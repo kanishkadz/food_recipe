@@ -107,6 +107,11 @@ class _HomeState extends State<Home> {
                     Text("Let's Cook Something New!", style: TextStyle(fontSize: 20,color: Colors.white),)
                   ],
                 ),
+              ),
+              Container(
+                child: ListView.builder(itemBuilder: (context, index){
+                  return Text("This is a widget");
+                }),
               )
             ],
           ),
