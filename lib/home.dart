@@ -4,10 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'model.dart';
 
-Widget KanishkaText(){
-  return Text("I'm Cool !!")
-}
-
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -37,7 +33,7 @@ class _HomeState extends State<Home> {
     recipeList.forEach((Recipe) {
       print(Recipe.applabel);
       print(Recipe.appcalories);
-    })
+    });
   }
   @override
   void initState() {
