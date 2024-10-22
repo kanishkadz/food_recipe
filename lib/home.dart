@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'recipe_model.dart';
 
+Widget KanishkaText(){
+  return Text("I'm Cool !!")
+}
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
