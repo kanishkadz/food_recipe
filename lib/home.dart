@@ -111,6 +111,7 @@ class _HomeState extends State<Home> {
               Container(
                 child: ListView.builder(
                     shrinkWrap: true,
+                    itemCount: 12,
                     itemBuilder: (context, index){
                   return Text("This is a widget");
                 }),
