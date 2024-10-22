@@ -134,7 +134,14 @@ class _HomeState extends State<Home> {
                               height: 200,
                             ),
                           ),
-
+                          Positioned(
+                            left: 0,
+                              bottom: 0,
+                              child: Container(
+                                padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                                  Text(recipeList[0].applabel),
+                              ),
+                          )
                         ],
                       ),
                     ),
