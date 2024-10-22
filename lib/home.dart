@@ -149,6 +149,10 @@ class _HomeState extends State<Home> {
                                   ),),
                               ),
                           )
+                          Positioned(
+                            right: 0,
+                            child: Text(recipeList[0].appcalories.toString().substring(0, 5)),
+                          )
                         ],
                       ),
                     ),
