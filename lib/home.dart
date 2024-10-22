@@ -120,8 +120,7 @@ class _HomeState extends State<Home> {
                         child: Card(
                           margin: EdgeInsets.all(20),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            elevation: 0.0,
+                            borderRadius: BorderRadius.circular(10)
                           ),
                           child: Stack(
                             children: [
