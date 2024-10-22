@@ -148,9 +148,11 @@ class _HomeState extends State<Home> {
                                     fontSize: 20
                                   ),),
                               ),
-                          )
+                          ),
                           Positioned(
                             right: 0,
+                            width: 50,
+                            height: 100,
                             child: Container(
                               decoration: BoxDecoration(
                                 color: Colors.white,
