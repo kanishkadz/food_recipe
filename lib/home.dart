@@ -163,6 +163,7 @@ class _HomeState extends State<Home> {
                               ),
                               child: Center(
                                 child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text(recipeList[0].appcalories.toString().substring(0, 6)),
                                   ],
