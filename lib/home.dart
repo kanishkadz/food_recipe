@@ -118,6 +118,7 @@ class _HomeState extends State<Home> {
                   return InkWell(
                     onTap: (){},
                     child: Card(
+                      margin: EdgeInsets.all(10)
                       child: Stack(
                         children: [
                           ClipRRect(
