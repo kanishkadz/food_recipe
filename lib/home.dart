@@ -151,7 +151,16 @@ class _HomeState extends State<Home> {
                           )
                           Positioned(
                             right: 0,
-                            child: Text(recipeList[0].appcalories.toString().substring(0, 5)),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(10),
+                                  bottomLeft: Radius.circular(10),
+                                )
+                              ),
+                              Text(recipeList[0].appcalories.toString().substring(0, 6)),
+                            )
                           )
                         ],
                       ),
