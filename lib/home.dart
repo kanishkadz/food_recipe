@@ -115,6 +115,7 @@ class _HomeState extends State<Home> {
               ),
               Container(
                 child: ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     itemCount: 12,
                     itemBuilder: (context, index){
