@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'package:flutter/material.dart';
-import 'package:food_recipe_app/model.dart';
+import 'package:food_recipe/model.dart';
 import 'package:http/http.dart';
 
 
@@ -20,8 +20,7 @@ class _SearchState extends State<Search> {
   TextEditingController searchController = new TextEditingController();
   List reciptCatList = [{"imgUrl": "https://images.unsplash.com/photo-1593560704563-f176a2eb61db", "heading": "Chilli Food"},{"imgUrl": "https://images.unsplash.com/photo-1593560704563-f176a2eb61db", "heading": "Chilli Food"},{"imgUrl": "https://images.unsplash.com/photo-1593560704563-f176a2eb61db", "heading": "Chilli Food"},{"imgUrl": "https://images.unsplash.com/photo-1593560704563-f176a2eb61db", "heading": "Chilli Food"}];
   getRecipes(String query) async {
-    String url =
-        "https://api.edamam.com/search?q=$query&app_id=ebb6041c&app_key=3c33ad913ab23b8554082bfb5fdd78b5";
+    String url = "https://api.edamam.com/search?q=$query&app_id=c90bf8d1&app_key=aca1f0d547799ccb805d117c94b040f0";
     Response response = await get(Uri.parse(url));
     Map data = jsonDecode(response.body);
     setState(() {
@@ -61,26 +60,6 @@ class _SearchState extends State<Search> {
                   colors: [Color(0xff213A50), Color(0xff071938)]),
             ),
           ),
-
-          /*
-      * InWell - Tap,DoubleTaP,etc.
-      * Gesture Detector
-      *
-      * Hover - Color
-      * Tap - Splash
-      *
-      * Getsure -
-      * Swipe,'
-      *
-      * Card - elevation background color,radius child
-      *
-      * ClipRRect - Frame - Photo Rectangle
-      *
-      * ClipPath - Custom CLips
-      *
-      * positioned  - Stack - topleft , top,down,left - 2.2
-      *
-      * */
           SingleChildScrollView(
             child: Column(
               children: [
@@ -88,7 +67,6 @@ class _SearchState extends State<Search> {
                 SafeArea(
                   child: Container(
                     //Search Wala Container
-
                     padding: EdgeInsets.symmetric(horizontal: 8),
                     margin: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
                     decoration: BoxDecoration(
@@ -193,17 +171,9 @@ class _SearchState extends State<Search> {
                             ),
                           );
                         })),
-
-
-
-
-
-
               ],
             ),
           ),
-
-
         ],
       ),
     );
