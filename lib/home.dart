@@ -1,10 +1,9 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'package:flutter/material.dart';
-import 'package:food_recipe_app/model.dart';
-import 'package:food_recipe_app/search.dart';
+import 'package:food_recipe/search.dart';
 import 'package:http/http.dart';
-import 'package:mode.dart';
+import 'package:food_recipe/model.dart';
 
 class Home extends StatefulWidget {
   @override
