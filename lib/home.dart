@@ -32,8 +32,6 @@ class _HomeState extends State<Home> {
         log(recipeList.toString());
       });
     });
-
-
     recipeList.forEach((Recipe) {
       print(Recipe.applabel);
       print(Recipe.appcalories);
@@ -58,26 +56,6 @@ class _HomeState extends State<Home> {
                   colors: [Color(0xff213A50), Color(0xff071938)]),
             ),
           ),
-
-          /*
-      * InWell - Tap,DoubleTaP,etc.
-      * Gesture Detector
-      *
-      * Hover - Color
-      * Tap - Splash
-      *
-      * Getsure -
-      * Swipe,'
-      *
-      * Card - elevation background color,radius child
-      *
-      * ClipRRect - Frame - Photo Rectangle
-      *
-      * ClipPath - Custom CLips
-      *
-      * positioned  - Stack - topleft , top,down,left - 2.2
-      *
-      * */
           SingleChildScrollView(
             child: Column(
               children: [
@@ -207,7 +185,6 @@ class _HomeState extends State<Home> {
                             ),
                           );
                         })),
-
                 Container(
                   height: 100,
                   child: ListView.builder( itemCount: reciptCatList.length, shrinkWrap: true,
@@ -259,17 +236,9 @@ class _HomeState extends State<Home> {
                         );
                       }),
                 )
-
-
-
-
-
-
               ],
             ),
           ),
-
-
         ],
       ),
     );
