@@ -1,15 +1,18 @@
-class RecipeModel {
-  final String applabel;
-  final String appimgUrl;
-  final double appcalories;
+class RecipeModel
+{
+  late String applabel;
+  late String appimgUrl;
+  late double appcalories;
+  late String appurl;
 
-  RecipeModel({required this.applabel, required this.appimgUrl, required this.appcalories});
-
-  factory RecipeModel.fromMap(Map<String, dynamic> map) {
+  RecipeModel({this.applabel = "LABEL",this.appcalories = 0.000 ,this.appimgUrl = "IMAGE",this.appurl = "URL"});
+  factory RecipeModel.fromMap(Map recipe)
+  {
     return RecipeModel(
-      applabel: map['label'],
-      appimgUrl: map['image'],
-      appcalories: map['calories'],
+        applabel: recipe["label"],
+        appcalories: recipe["calories"],
+        appimgUrl: recipe["image"],
+        appurl: recipe["url"]
     );
   }
 }
