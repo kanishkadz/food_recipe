@@ -15,7 +15,6 @@
 <h2>Tech Stack</h2>
 <ul>
   <li><strong>Flutter</strong>: For creating the cross-platform app.</li>
-  <li><strong>Firebase</strong>: For managing user authentication and storing recipe data.</li>
   <li><strong>Provider</strong>: State management solution for Flutter.</li>
   <li><strong>Dart</strong>: Programming language used for Flutter development.</li>
 </ul>
